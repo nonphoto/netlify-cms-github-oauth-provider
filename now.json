@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "name": "netlify-cms-auth-provider",
     "alias": [
         "netlify-cms-auth-provider"
     ],
