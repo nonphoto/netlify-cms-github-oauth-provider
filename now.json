@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "alias": [
+        "netlify-cms-auth-provider"
+    ],
+    "env": {
+        "NODE_ENV": "production",
+        "OAUTH_CLIENT_ID": "@netlify-cms-auth-provider-id",
+        "OAUTH_CLIENT_SECRET": "@netlify-cms-auth-provider-secret"
+    },
+    "builds": [
+        { "src": "/index.js", "use": "@now/node-server" }
+    ],
+    "routes": [
+        { "src": "/.*", "dest": "/index.js" }
+    ]
+}

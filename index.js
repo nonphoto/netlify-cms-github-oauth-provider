@@ -2,7 +2,6 @@ require('dotenv').config({silent: true})
 const express = require('express')
 const simpleOauthModule = require('simple-oauth2')
 const randomstring = require('randomstring')
-const port = process.env.PORT || 3000
 const oauth_provider = process.env.OAUTH_PROVIDER || 'github'
 const login_auth_target = process.env.AUTH_TARGET || '_self'
 
@@ -91,6 +90,4 @@ app.get('/', (req, res) => {
   res.send('Hello<br><a href="/auth" target="'+login_auth_target+'">Log in with '+oauth_provider.toUpperCase()+'</a>')
 })
 
-app.listen(port, () => {
-  console.log("gandalf is walkin' on port " + port)
-})
+app.listen()
